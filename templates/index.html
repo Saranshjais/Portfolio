@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Saransh Jaiswal — Portfolio</title>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+
+  <!-- Icons (optional) -->
+  <script src="https://kit.fontawesome.com/yourkitid.js" crossorigin="anonymous" defer></script>
+
+  <!-- JS -->
+  <script src="{{ url_for('static', filename='script.js') }}" defer></script>
+</head>
+<body>
+  <!-- Animated background layers -->
+  <div class="bg-gradient"></div>
+  <div class="bg-orbs"></div>
+
+  <!-- Navbar -->
+  <header class="navbar-wrap">
+    <nav class="navbar container">
+      <div class="brand">
+        <a href="#home">Saransh Jaiswal</a>
+      </div>
+
+      <button id="menuToggle" class="hamburger" aria-label="menu">
+        <span></span><span></span><span></span>
+      </button>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a class="btn" href="{{ url_for('static', filename='Saransh Jaiswal.pdf') }}" target="_blank">Resume</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <main>
+    <section id="home" class="hero section center reveal">
+      <div class="hero-inner container">
+        <div class="hero-text">
+          <h1>Hi, I’m <span class="accent">Saransh Jaiswal</span></h1>
+          <h3>AI & Data Science Graduate</h3>
+          <p>Python • SQL • Power BI • Flask • Data Analysis </p>
+
+          <div class="hero-actions">
+            <a class="btn large" href="{{ url_for('static', filename='Saransh Jaiswal.pdf') }}" target="_blank">📄 View Resume</a>
+            <a class="btn ghost" href="#projects">See Projects</a>
+          </div>
+        </div>
+
+        <div class="hero-card">
+          <div class="profile-pulse"></div>
+          <img src="{{ url_for('static', filename='profile.jpeg') }}" alt="profile" style="width: 260px; height: 250px;" />
+
+        <div class="card-info">
+          <h3>Data Analyst</h3>
+          <p>Python • SQL • Power BI • Flask</p>
+        </div>
+
+        </div>
+      </div>
+    </section>
+
+
+
+<!-- Skills -->
+<section id="skills" class="section reveal">
+  <div class="container">
+    <h2 class="section-title">Skills</h2>
+    <p class="section-sub">Technologies & tools I work with</p>
+
+    <div class="skills-row">
+      <!-- Core Languages -->
+      <div class="skill-category-block">
+        <h3 class="skill-category">Core Languages</h3>
+        <div class="skills-grid">
+          <span class="skill">Python</span>
+          <span class="skill">SQL</span>
+        </div>
+      </div>
+
+      <!-- Data Tools -->
+      <div class="skill-category-block">
+        <h3 class="skill-category">Data Tools</h3>
+        <div class="skills-grid">
+          <span class="skill">Power BI</span>
+          <span class="skill">Pandas</span>
+          <span class="skill">NumPy</span>
+          <span class="skill">Matplotlib</span>
+          <span class="skill">Scikit-learn</span>
+          <span class="skill">NLP (TextBlob / VADER)</span>
+        </div>
+      </div>
+
+      <!-- Databases -->
+      <div class="skill-category-block">
+        <h3 class="skill-category">Databases</h3>
+        <div class="skills-grid">
+          <span class="skill">MySQL</span>
+          <span class="skill">PostgreSQL</span>
+          <span class="skill">MongoDB</span>
+        </div>
+      </div>
+
+      <!-- Frameworks & APIs -->
+      <div class="skill-category-block">
+        <h3 class="skill-category">Frameworks & APIs</h3>
+        <div class="skills-grid">
+          <span class="skill">Flask</span>
+          <span class="skill">REST APIs</span>
+          <span class="skill">Google Maps API</span>
+        </div>
+      </div>
+
+      <!-- Others -->
+      <div class="skill-category-block">
+        <h3 class="skill-category">Others</h3>
+        <div class="skills-grid">
+          <span class="skill">Data Visualization</span>
+          <span class="skill">Machine Learning</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+<!-- Projects -->
+<section id="projects" class="section reveal">
+  <div class="container">
+    <h2 class="section-title">Projects</h2>
+    <p class="section-sub">Some of my work — explore on GitHub too</p>
+
+    <div class="projects-grid">
+
+      <article class="project-card">
+        <div class="project-thumb">
+          <img src="{{ url_for('static', filename='blinkit.png') }}" alt="Blinkit Data Analysis">
+        </div>
+        <div class="project-body">
+          <h3>Blinkit Data Analysis & Power BI Dashboard</h3>
+          <p>Analyzed Blinkit sales & operations data and built interactive dashboards in Power BI to visualize trends, sales performance, and insights.</p>
+          <div class="project-tags">
+            <span>Power BI</span><span>Data Analysis</span><span>Python</span>
+          </div>
+          <a href="https://github.com/Saranshjais/blinkit-data-analysis-powerbi" target="_blank" class="project-link">View on GitHub</a>
+        </div>
+      </article>
+
+      <article class="project-card">
+        <div class="project-thumb">
+          <img src="{{ url_for('static', filename='proj-sentiment-powerbi.png') }}" alt="Social Media Sentiment Analysis">
+        </div>
+        <div class="project-body">
+          <h3>Social Media Sentiment Analysis & Power BI</h3>
+          <p>Performed sentiment analysis on social media data, visualized results with Power BI notebooks, and derived insights on public perception. </p>
+          <div class="project-tags">
+            <span>Python</span><span>Power BI</span><span>NLP</span>
+          </div>
+          <a href="https://github.com/Saranshjais/social-media-sentiment-powerbi" target="_blank" class="project-link">View on GitHub</a>
+        </div>
+      </article>
+
+      <article class="project-card">
+        <div class="project-thumb">
+          <img src="{{ url_for('static', filename='proj-hungrybird.jpeg') }}" alt="Hungry Bird">
+        </div>
+        <div class="project-body">
+          <h3>HungryBird</h3>
+          <p>A street-food finder app to discover local food vendors, built with Python. Implemented search, location filtering, and interactive UI.</p>
+          <div class="project-tags">
+            <span>Python</span><span>Web App</span><span>Flask / Django</span>
+          </div>
+          <a href="https://github.com/Saranshjais/hungrybird" target="_blank" class="project-link">View on GitHub</a>
+        </div>
+      </article>
+
+      <article class="project-card">
+        <div class="project-thumb">
+          <img src="{{ url_for('static', filename='proj-zomato.jpeg') }}" alt="Zomato Sentiment & Recommendation">
+        </div>
+        <div class="project-body">
+          <h3>Zomato Sentiment Analysis & Recommendation System</h3>
+          <p>Analyzed reviews from Zomato, extracted sentiment using NLP, and recommended restaurants based on positive sentiment & user preferences.</p>
+          <div class="project-tags">
+            <span>Python</span><span>NLP</span><span>Recommendation System</span>
+          </div>
+          <a href="https://github.com/Saranshjais/-Zomato-Sentiment-Analysis" target="_blank" class="project-link">View on GitHub</a>
+        </div>
+      </article>
+
+      <article class="project-card">
+        <div class="project-thumb">
+          <img src="{{ url_for('static', filename='shopper.jpeg') }}" alt="Shopper Spectrum">
+        </div>
+        <div class="project-body">
+          <h3>Shopper Spectrum</h3>
+          <p>Explored customer segmentation & behavior using data science techniques. Created visualizations and insights from shopper datasets.</p>
+          <div class="project-tags">
+            <span>Python</span><span>Data Analysis</span><span>Visualization</span>
+          </div>
+          <a href="https://github.com/Saranshjais/Shopper-Spectrum" target="_blank" class="project-link">View on GitHub</a>
+        </div>
+      </article>
+
+      <article class="project-card">
+        <div class="project-thumb">
+          <img src="{{ url_for('static', filename='proj-wastage.png') }}" alt="Local Food Wastage Management">
+        </div>
+        <div class="project-body">
+          <h3>Local Food Wastage Management System</h3>
+          <p>Built tools to analyze local food waste, propose optimizations, and track metrics. Used notebooks to model reductions and visualize data.</p>
+          <div class="project-tags">
+            <span>Python</span><span>Notebook</span><span>Data Visualization</span>
+          </div>
+          <a href="https://github.com/Saranshjais/Local-Food-Wastage-Management-System" target="_blank" class="project-link">View on GitHub</a>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+
+
+    <!-- Contact -->
+    <!-- Contact -->
+<section id="contact" class="section reveal">
+  <div class="container narrow">
+    <h2 class="section-title">Contact</h2>
+    <p class="section-sub">Let’s build something great together ✨</p>
+
+    <div class="contact-grid">
+      <div class="contact-card">
+        <h4>Email</h4>
+        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=saranshjaiswal2401@gmail.com" target="_blank">
+  saranshjaiswal2401@gmail.com
+</a>
+
+
+      </div>
+      <div class="contact-card">
+        <h4>LinkedIn</h4>
+        <a href="https://www.linkedin.com/in/saransh-jaiswal-440496271" target="_blank">
+          linkedin.com/in/saransh-jaiswal-440496271
+        </a>
+      </div>
+      <div class="contact-card">
+        <h4>GitHub</h4>
+        <a href="https://github.com/Saranshjais" target="_blank">
+          github.com/Saranshjais
+        </a>
+      </div>
+    </div>
+
+    <p class="footer">© Saransh Jaiswal • Built with Flask</p>
+  </div>
+</section>
+
+  </main>
+</body>
+</html>
